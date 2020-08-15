@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </head>
+<body>
+    <div class = "container text-center">
+        <a href="{% url 'about' %}">About Me</a>
+        <h1>This is the new homepage</h1>
+        <form action="{% url 'password' %}">
+            <select name="length">
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9", selected="selected">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+            </select> Length
+
+            <br>
+            
+            <input type="checkbox", class="btn btn-primary", name = "upper"> Uppercase
+            <br>
+            <input type="checkbox", class="btn btn-primary", name = "numbers"> Numbers
+            <br>
+            <input type="checkbox", class="btn btn-primary", name = "special"> Special
+            <br>
+            <input type="submit" class="btn btn-danger", value="generate">
+
+        </form>
+    </div>
+</body>
+</html>
